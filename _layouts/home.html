@@ -1,0 +1,74 @@
+---
+layout: default
+---
+
+<!-- Header -->
+{% if page.background %}
+<header class="masthead"
+  style="background-image: url('{{ page.background | prepend: site.baseurl | replace: '//', '/' }}')">
+  {% else %}
+  <header class="masthead">
+    {% endif %}
+    <div class="overlay"></div>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+          <div class="page-heading">
+            <h1>Every dev has a home on the www.</h1>
+            <span class="subheading">That's mine.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Intro Section -->
+  <div class="container">
+    <div class="row">
+      <div class="col text-center">
+        <h1>Hi, I'm Bogdan.</h1>
+          <p>I'm a Bulgarian software engineer living and working in Munich. I have an inner passion for 
+            learning stuff and strive for clean and scalable code in the context of mobile and web development.
+          </p>
+          <a class="btn btn-outline-primary rounded-pill my-4" href="{{"/about" | relative_url }}">Learn More</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Content Posts Section -->
+  <header class="masthead my-4">
+    <div class="overlay"></div>
+    <div class="container">
+      <div class="row">
+        <div class="col float-start">
+          <h1 class="text-white py-4" style="font-size: 50px;">Recent Posts.</h1>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-md-10 mx-auto">
+
+        {{ content }}
+
+        {% for post in site.posts limit : 5 %}
+
+        <article class="post-preview">
+          <a href="{{ post.url | prepend: site.baseurl | replace: '//', '/' }}">
+            <h2 class="post-title">{{ post.title }}</h2>
+            {% if post.subtitle %}
+            <h3 class="post-subtitle">{{ post.subtitle }}</h3>
+            {% else %}
+            <h3 class="post-subtitle">{{ post.excerpt | strip_html | truncatewords: 15 }}</h3>
+            {% endif %}
+          </a>
+          <p class="post-meta">Posted on
+            {{ post.date | date: '%B %d, %Y' }} &middot; {% include read_time.html content=post.content %}
+          </p>
+        </article>
+        {% endfor %}
+      </div>
+    </div>
+  </div>

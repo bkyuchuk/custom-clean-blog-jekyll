@@ -32,10 +32,10 @@ layout: default
         <div class="clearfix">
 
           {% if page.previous.url %}
-          <a class="btn btn-outline-primary float-left rounded-pill" href="{{ page.previous.url | prepend: site.baseurl | replace: '//', '/' }}" data-toggle="tooltip" data-placement="top" title="{{ page.previous.title }}">Previous<span class="d-none d-md-inline"></span></a>
+          <a class="btn btn-outline-primary float-left rounded-pill btn-block" href="{{ page.previous.url | prepend: site.baseurl | replace: '//', '/' }}" data-toggle="tooltip" data-placement="top" title="{{ page.previous.title }}">Previous<span class="d-none d-md-inline"></span></a>
           {% endif %}
           {% if page.next.url %}
-          <a class="btn btn-outline-primary float-right rounded-pill" href="{{ page.next.url | prepend: site.baseurl | replace: '//', '/' }}" data-toggle="tooltip" data-placement="top" title="{{ page.next.title }}">Next<span class="d-none d-md-inline"></span></a>
+          <a class="btn btn-outline-primary float-right rounded-pill btn-block" href="{{ page.next.url | prepend: site.baseurl | replace: '//', '/' }}" data-toggle="tooltip" data-placement="top" title="{{ page.next.title }}">Next<span class="d-none d-md-inline"></span></a>
           {% endif %}
 
         </div>

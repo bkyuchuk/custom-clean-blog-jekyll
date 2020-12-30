@@ -25,11 +25,11 @@ layout: default
 
   <div class="container">
     <div class="row">
-      <div class="col-lg-8 col-md-10 mx-auto my-3">
+      <div class="col-lg-8 col-md-10 mx-auto">
 
         {{ content }}
 
-        <div class="clearfix">
+        <div class="clearfix my-3">
 
           {% if page.previous.url %}
           <a class="btn btn-outline-primary float-left rounded-pill" href="{{ page.previous.url | prepend: site.baseurl | replace: '//', '/' }}" data-toggle="tooltip" data-placement="top" title="{{ page.previous.title }}">Previous<span class="d-none d-md-inline"></span></a>

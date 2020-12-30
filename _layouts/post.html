@@ -29,7 +29,9 @@ layout: default
 
         {{ content }}
 
-        <div class="clearfix my-3">
+        <br>
+        
+        <div class="clearfix">
 
           {% if page.previous.url %}
           <a class="btn btn-outline-primary float-left rounded-pill" href="{{ page.previous.url | prepend: site.baseurl | replace: '//', '/' }}" data-toggle="tooltip" data-placement="top" title="{{ page.previous.title }}">Previous<span class="d-none d-md-inline"></span></a>

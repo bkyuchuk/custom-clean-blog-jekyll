@@ -22,7 +22,9 @@
 }
 
 .nav-item {
-  background-color: $primary;
+  border: 1pt;
+  border-color: $primary;
+  border-radius: 20pt;
 }
 
 .btn-outline-primary {

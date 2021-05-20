@@ -22,8 +22,10 @@
 }
 
 .nav-link {
-  border-color: $primary;
-  border-radius: 20pt;
+  &:active {
+    background-color: $primary;
+    border-radius: 20pt;
+  }
 }
 
 .btn-outline-primary {

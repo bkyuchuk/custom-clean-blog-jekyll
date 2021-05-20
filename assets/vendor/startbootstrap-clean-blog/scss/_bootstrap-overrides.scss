@@ -21,7 +21,7 @@
   }
 }
 
-.nav-link {
+.nav-link, .nav-pills {
   &:active {
     background-color: $primary;
     border-radius: 20pt;

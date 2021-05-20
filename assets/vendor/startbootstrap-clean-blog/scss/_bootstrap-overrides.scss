@@ -22,10 +22,8 @@
 }
 
 .nav-link, .nav-pills {
-  &:active {
-    background-color: $primary;
+  background-color: $primary;
     border-radius: 20pt;
-  }
 }
 
 .btn-outline-primary {
